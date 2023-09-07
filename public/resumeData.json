@@ -5,16 +5,9 @@
     "image":"profilepic.jpeg",
     "bio":"Stocker 프로젝트는 실제 주식 거래 (매수 & 매도) 대용량 데이터를 활용하여 거래 플랫폼을 만드는 프로  젝트입니다. 저희의 목표는 대용량 데이터와 트래픽을 효율적으로 처리할 수 있는 아키텍처를 구축하고, 보다 효율적인 작동을 실현.",
     "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
-    "email": "youremailhere@gmail.com",
-    "phone": "555-555-5555",
     "github":"https://github.com/orgs/team9-be/repositories",
     "project":"https://github.com/team9-be/stocker-be",
-    "address":{
-      "street":"(Your Street)",
-      "city":"(Your City)",
-      "state":"(Your State)",
-      "zip": "(Your Zip/Postal Code)"
-    },
+
     "website": "http://www.timbakerdev.com",
     "resumedownload":"http://timbakerdev.com",
     "social":[
