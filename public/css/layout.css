@@ -206,25 +206,23 @@ ul#nav li.current a { color: #fe6928; }
    height: 120px;
    border-radius: 100%;
 }
-#about .contact-details { width: 41.66667%; }
-#about .download {
-   width: 58.33333%;
-   padding-top: 6px;
-}
+
 #about .main-col { padding-right: 5%; }
-#about .download .button {
+/* #about .download .button {
    margin-top: 6px;
    background: #444;
 }
 #about .download .button:hover {
    background: #fff;
    color: #2B2B2B;
-}
-#about .download .button i {
-   margin-right: 15px;
-   font-size: 20px;
-}
+} */
 
+
+#about .stock-ranking-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
 
 /* ------------------------------------------------------------------ */
 /* d. Resume Section
