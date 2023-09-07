@@ -10,28 +10,23 @@
 
     "social":[
       {
-        "name":"facebook",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
-        "className":"fa fa-facebook"
+        "name":"dojun_kim",
+        "url":"https://github.com/downside154",
+        "className":"fa fa-github"
       },
       {
-        "name":"twitter",
-        "url":"http://twitter.com",
-        "className":"fa fa-twitter"
+        "name":"uijin_lee",
+        "url":"https://github.com/powerlife145",
+        "className":"fa fa-github"
       },
       {
-        "name":"linkedin",
-        "url":"https://www.linkedin.com/in/tim-baker-8420009a/",
-        "className":"fa fa-linkedin"
+        "name":"hyunsung_choi",
+        "url":"https://github.com/ByHorizon",
+        "className":"fa fa-github"
       },
       {
-        "name":"instagram",
-        "url":"http://instagram.com/tbaker_x",
-        "className":"fa fa-instagram"
-      },
-      {
-        "name":"github",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
+        "name":"sunwoo_lee",
+        "url":"https://github.com/tjsdn9803",
         "className":"fa fa-github"
       }
     ]
