@@ -1,57 +1,86 @@
-import React, { Component } from "react";
+import React, { useCallback } from "react";
 import Slide from "react-reveal";
+import axios from "axios";
 
-class Resume extends Component {
-  getRandomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+const Resume = (props) => {
+
+const sendRequest = useCallback(async (endpoint) => {
+  const url = `https://stocker9.com/api/trade/test/${endpoint}`;
+  try {
+    const res = await axios.post(url);
+    console.log(res.data);
+    alert("Trade Order Submitted"); 
+  } catch (error) {
+    console.error(error);
+    alert(error); 
   }
+}, []);
 
-  render() {
-    if (!this.props.data) return null;
+const clickBuy = () => {
+  sendRequest("buy");
+}
+const clickBuy2 = () => {
+  sendRequest("buy2");
+};
+const clickSell = () => {
+  sendRequest("sell");
+};
+const clickSell2 = () => {
+  sendRequest("sell2");
+};
 
-    const education = this.props.data.education.map(function (education) {
-      return (
-        <div key={education.school}>
-          <h3>{education.school}</h3>
-          <div className="trade-button-wrapper">
-            <br />
 
-            <div className="trade-button-container">
-              <button>BUY</button>
-              <button>SELL</button>
-            </div>
-            <br />
+  return (
+    <section id="resume">
+      <Slide left duration={1300}>
+        <div className="row education">
+          <div className="three columns header-col">
+            <h1>
+              <span>Trade</span>
+            </h1>
           </div>
-        </div>
-      );
-    });
+          <div className="nine columns main-col">
+            <div className="row item">
+              <div className="twelve columns">
+                <br /> <br />
+                <div key="삼성전자">
+                  <h3>삼성전자</h3>
+                  <div className="trade-button-wrapper">
+                    <br />
+                    <div className="trade-button-container">
+                      <button className="buy-1" onClick={clickBuy}>
+                        BUY
+                      </button>
+                      <button className="sell-1" onClick={clickSell}>
+                        SELL
+                      </button>
+                    </div>
+                    <br />
+                  </div>
+                </div>
+                <div key="sk하이닉스">
+                  <h3>sk하이닉스</h3>
+                  <div className="trade-button-wrapper">
+                    <br />
 
-    return (
-      <section id="resume">
-        <Slide left duration={1300}>
-          <div className="row education">
-            <div className="three columns header-col">
-              <h1>
-                <span>Trade
-                </span>
-              </h1>
-            </div>
-
-            <div className="nine columns main-col">
-              <div className="row item">
-                <div className="twelve columns">{education}</div>
+                    <div className="trade-button-container">
+                      <button className="buy-2" onClick={clickBuy2}>
+                        BUY
+                      </button>
+                      <button className="sell-2" onClick={clickSell2}>
+                        SELL
+                      </button>
+                    </div>
+                    <br />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </Slide>
-      </section>
-    );
-  }
-}
+        </div>
+      </Slide>
+    </section>
+  );
+};
 
 export default Resume;

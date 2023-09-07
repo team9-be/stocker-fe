@@ -30,15 +30,5 @@
         "className":"fa fa-github"
       }
     ]
-  },
-  "resume":{
-    "education":[
-      {
-        "school":"삼성전자"
-      },
-      {
-        "school":"SK하이닉스"
-      }
-    ]
   }
 }
