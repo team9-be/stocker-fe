@@ -30,6 +30,7 @@ class About extends Component {
               <br /> <br />
               <div className="row">
                 <h2>Stock Rankings</h2>
+                <br />
                 <div className="stock-ranking-container">
                   <div className="stock-rankings-sub">
                     <h3>Top 10 Performers</h3>
