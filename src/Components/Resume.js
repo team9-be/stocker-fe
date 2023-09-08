@@ -7,11 +7,9 @@ const Resume = (props) => {
 const sendRequest = useCallback(async (endpoint) => {
   const url = `https://stocker9.com/api/trade/test/${endpoint}`;
   try {
-    const res = await axios.post(url);
-    console.log(res.data);
+    await axios.post(url);
     alert("Trade Order Submitted"); 
   } catch (error) {
-    console.error(error);
     alert(error); 
   }
 }, []);
@@ -59,7 +57,7 @@ const clickSell2 = () => {
                   </div>
                 </div>
                 <div key="sk하이닉스">
-                  <h3>sk하이닉스</h3>
+                  <h3>SK하이닉스</h3>
                   <div className="trade-button-wrapper">
                     <br />
 

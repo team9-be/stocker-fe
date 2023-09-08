@@ -26,6 +26,18 @@ const About = (props) => {
     { company: "포스코인터내셔널", decreasePercentage: 0.0 },
     { company: "삼성생명", decreasePercentage: 0.0 },
   ];
+    const volumeData = [
+      { company: "KODEX 코스닥150선물인버스", tradeVolume: 123509459 },
+      { company: "KODEX 200선물인버스2X", tradeVolume: 118606981 },
+      { company: "삼부토건", tradeVolume: 51772691 },
+      { company: "한국ANKOR유전", tradeVolume: 29051700 },
+      { company: "신한 인버스 2X WTI원유 선물 ETN(H)", tradeVolume: 25053289 },
+      { company: "KODEX 코스닥150레버리지", tradeVolume: 22321628 },
+      { company: "에이프로젠바이오로직스", tradeVolume: 21363493 },
+      { company: "KODEX 인버스", tradeVolume: 20753967 },
+      { company: "KODEX 레버리지", tradeVolume: 19527342 },
+      { company: "에이프로젠", tradeVolume: 18872655 },
+    ];
 
   const increaseList = increaseData.map((item, index) => {
     return (
@@ -41,6 +53,13 @@ const About = (props) => {
       </li>
     );
   });
+    const volumeList = volumeData.map((item, index) => {
+      return (
+        <li key={index}>
+          {index + 1}. {item.company} ({item.tradeVolume})
+        </li>
+      );
+    });
 
   if (!props.data) return null;
   const profilepic = "images/" + props.data.image;
@@ -64,19 +83,28 @@ const About = (props) => {
             <p>{bio}</p>
             <br /> <br />
             <br /> <br />
+            <h2>Stock Rankings</h2>
             <div className="row">
-              <h2>Stock Rankings</h2>
               <br />
               <div className="stock-ranking-container">
                 <div className="stock-rankings-sub">
-                  <h3>Top 10 Performers</h3>
-                  <div className="row">{increaseList}</div>
-                </div>
+                  <div className="stock-rankings-sub-sub">
+                    <h3>Top 10 by Trade Volume</h3>
+                    <div className="row">{volumeList}</div>
+                  </div>
+                  <br />
+                  <br />
+                  <div className="stock-rankings-sub-sub">
+                    <h3>Top 10 Performers</h3>
+                    <div className="row">{increaseList}</div>
+                  </div>
+                  <br />
+                  <br />
 
-                <div className="stock-rankings-sub">
-                  <h3>Worst 10 Performers</h3>
-
-                  <div className="row">{decreaseList}</div>
+                  <div className="stock-rankings-sub">
+                    <h3>Worst 10 Performers</h3>
+                    <div className="row">{decreaseList}</div>
+                  </div>
                 </div>
               </div>
             </div>
